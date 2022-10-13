@@ -51,4 +51,11 @@ concat(to_string(@grid_number), '°    ')
 - Data input memiliki banyak kolom. Kita hanya dapat memilih sebagian dari kolom asli untuk diekspor. Perluas bagian Pilih bidang yang akan diekspor dan opsi ekspornya . Klik Deselect All dan centang kolom nameand pop_max. Klik Oke .
 - Sebuah layer baru populated_capitalsakan dimuat di QGIS. Anda dapat menghapus centang pada ne_10m_populated_places_simplelayer untuk menyembunyikannya dan melihat poin dari layer yang baru diekspor.
 
+ 3. Mengimpor file Spreadsheet atau CSV
  
+ - Download dataset gempa bumi antara tahun 1900-2000 dari National Geophysical Data Center NOAA
+ -  Klik tombol Buka Pengelola Sumber Data pada Bilah Alat Sumber Data Open Data Source.
+ - Dalam kotak dialog Pengelola Sumber Data , alihkan ke tab Teks Dibatasi . Klik tombol di sebelah nama File.
+ - Pilih file yan telah diunduh, dan klik Open.
+ - Di kotak dialog Pengelola Sumber Data , jalur ke file akan tersedia di Nama File . Ubah nama Lapisan menjadi 1900_2000_earthquakes. Di bagian Format file , pilih Pembatas khusus dan centang Tab. Di bagian Definisi geometri , pilih Koordinat titik . Secara default , nilai bidang X dan bidang Y akan terisi secara otomatis jika menemukan bidang nama yang sesuai di input. Dalam kasus kami, mereka adalah Longitudedan Latitude. Kita dapat mengubahnya jika impor memilih bidang yang salah. Anda dapat membiarkan Geometry CRS ke defaultEPSG:4326 - WGS 84CRS. Jika file Anda berisi koordinat dalam CRS yang berbeda, Anda dapat memilih CRS yang sesuai di sini. Klik Tambahkan.
+ - Data akan diimpor dan ditampilkan di kanvas QGIS sebagai layer baru yang disebut 1900_2000_earthquakesdengan CRS EPSG:4326.
